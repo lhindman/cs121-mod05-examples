@@ -1,8 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "MyApp"
+			"path": "ArrayListBasics"
 		},
+		{
+			"path": "FileProcessing"
+		}
 	],
 	"settings": {
 		"files.exclude": {
