@@ -1,6 +1,9 @@
 {
 	"folders": [
 		{
+			"path": "StaticMethods"
+		},
+		{
 			"path": "ArrayListBasics"
 		},
 		{
