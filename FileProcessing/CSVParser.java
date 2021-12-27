@@ -47,7 +47,13 @@ public class CSVParser {
 					System.out.println("Duration: " + duration);
 					System.out.println("**************************");
 
+					/* Done processing this line, so close the line Scanner to release the resrouces */
+					bobsLineScanner.close();
+
 				}
+
+				/* Done Processing the file, so close the file Scanner to release the resources */
+				bobsScanner.close();
 
 			} catch (FileNotFoundException e) {
 				System.out.println("Unable to open file: " + bobsFile);
