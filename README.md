@@ -91,7 +91,7 @@ Steps to Clone Examples
 1. Open *CSVParser.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
     - Students often struggle with the CSVParser example because it uses two different types of Scanner objects, one to scan the File line-by-line and other other to process each individual line to extract the data fields. To help reienforce this idea of processing the CSV file line, use the following code to modify the existing loop to output line numbers preceeding the unprocessed CSV data before displaying it in the console.
     ```
-    /* 3. Create a loop to read each line from the Scanner */
+        /* 3. Create a loop to read each line from the Scanner */
         int lineNumber = 1;
         while(bobsScanner.hasNextLine()) {
             String line = bobsScanner.nextLine();
@@ -102,17 +102,23 @@ Steps to Clone Examples
 
             ...
     ```
-    - Modify the Random object so that it is instantiated using a seed number as shown below. Then Play the game three more times, recording the answer each time. What is the result and why?  
+    - When working with CSV data files, each line of the file contains *data fields* that are separate by commas. Modify the print statements as shown below, replacing the data labels with their cooresponding field number. Record your observations.
     ```
-    Random generator = new Random(123);
+	/* 7. Print each song */
+    System.out.println("**************************");
+    System.out.println("CSV Field 1:" + artist);
+    System.out.println("CSV Field 2:" + album);
+    System.out.println("CSV Field 3: " + title);
+    System.out.println("CSV Field 4: " + duration);
+    System.out.println("**************************");
     ```
-      
-## Exception Experimentation
-1. Open *GradeReport.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Run the program with each of the following grades as input values and record the results of each. 
-        - 95
-        - 83
-        - 71
-        - 64
-        - 59
-    - Modify the switch statement by removing all of the *break* statements. The run the program again with the above values. What is the result and why?
+
+    - Revert the code changes made in the previous steps.  Click the *Source Control* icon then select *CSVParser.java* from the list of changes. Hover over the icons beside the filenames to find the icon labelled **Discard Changes**, then click it. This will revert all the code changes to CSVParser.java back to the last commit.  Please be careful if you choose to use this functionality when working in your lab activities.
+    - The order that we read the fields using the scanner matters.  We know that the artist if the first field, so we assign the string value to a variable called **artist**.  We know that the title is the third field so we assign the value returned by the third call to *next()* to **title**.  Modify the field extraction code as shown below, swapping the artist and title lines, then run the program.  What has changed in the output?  Why?
+    ```
+    /* 6. Extract the individual fields from each line */
+    String title = bobsLineScanner.next();
+    String album = bobsLineScanner.next();
+    String artist = bobsLineScanner.next();
+    int duration = bobsLineScanner.nextInt();
+    ```
