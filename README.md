@@ -114,7 +114,7 @@ Steps to Clone Examples
     ```
 
     - Revert the code changes made in the previous steps.  Click the *Source Control* icon then select *CSVParser.java* from the list of changes. Hover over the icons beside the filenames to find the icon labelled **Discard Changes**, then click it. This will revert all the code changes to CSVParser.java back to the last commit.  Please be careful if you choose to use this functionality when working in your lab activities.
-    - The order that we read the fields using the scanner matters.  We know that the artist if the first field, so we assign the string value to a variable called **artist**.  We know that the title is the third field so we assign the value returned by the third call to *next()* to **title**.  Modify the field extraction code as shown below, swapping the artist and title lines, then run the program.  What has changed in the output?  Why?
+    - The order that we read the fields using the scanner matters.  We know that the artist is the first field, so we assign the string value of the first call to *next()* to a variable called **artist**.  We know that the title is the third field so we assign the value returned by the third call to *next()* to **title**.  Modify the field extraction code as shown below, swapping the artist and title lines, then run the program.  What has changed in the output?  Why?
     ```
     /* 6. Extract the individual fields from each line */
     String title = bobsLineScanner.next();
