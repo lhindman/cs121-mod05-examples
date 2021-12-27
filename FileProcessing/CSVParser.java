@@ -4,6 +4,10 @@ import java.io.FileNotFoundException;
 /* 0.75 Import Scanner class */
 import java.util.Scanner;
 
+/**
+ * Driver class to demonstrate CSV File Parsing
+ * @author Luke Hindman
+ */
 public class CSVParser {
 
 	public static void main(String[] args) {
