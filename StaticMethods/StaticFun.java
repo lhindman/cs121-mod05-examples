@@ -1,3 +1,7 @@
+/**
+ * Driver class to demonstrate static methods
+ * @author Luke Hindman
+ */
 public class StaticFun {
     
     public static void main (String[] args) {
