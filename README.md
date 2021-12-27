@@ -11,39 +11,47 @@ Steps to Clone Examples
 5. When prompted, Open the repository then Open the workspace
 
 ## Static Method Experimentation
-1. Open *SmartHome.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Modify the values as shown below. Has the alert been triggered and if not, why?  
+1. Open *StaticFun.java* and *Utility.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
+    - Add the following two static methods to Utility.java.  Study both methods carefully to understand what they are doing.
     ```
-    alertMode = false
-    lightsOn = true
-    away = true
-    timeOn = 0
+    public static void numDoubler1(int x) {
+        x = x * 2;
+    }
+
+    public static int numDoubler2(int x) {
+        x = x * 2;
+        return x;
+    }
     ```
  
-    - Modify the values as shown below. Has the alert been triggered and if not, why?  
+    - Add the following code to the end of the main method in StaticFun.java. What effect do the calls to numDoubler1() and numDoubler2() have on the value of myNum?, why?  
     ```
-    alertMode = false
-    lightsOn = true
-    away = true
-    timeOn = 120
+        int myNum = 2;
+        
+        Utility.numDoubler1(myNum);
+        System.out.println("Value of myNum after calling numDoubler1: " + myNum);
+
+        myNum = Utility.numDoubler2(myNum);
+        System.out.println("Value of myNum after calling numDoubler2: " + myNum);
     ```
     
-    - Modify the values as shown below. Has the alert been triggered and if not, why?  
+1. Open *StaticFun.java* and *Utility.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
+    - Add the following static method to Utility.java.  To build successfully, don't forget to import the **java.awt.point** class. Study the method carefully to understand what it is doing.
     ```
-    alertMode = true
-    lightsOn = false
-    away = false
-    timeOn = 120
+    public static void pointDoubler(Point p) {
+        p.x = p.x * 2;
+        p.y = p.y * 2;
+    }
     ```
-
-    - Modify the values as shown below. Has the alert been triggered and if not, why?  
+ 
+    - Add the following code to the end of the main method in StaticFun.java. Were the values of x and y inside the Point object modified by the pointDoubler() method even though it doesn't have a return value? What is the difference between passing in an object as a argument to a method vs passing in a primitive data type such as an int?  
     ```
-    alertMode = true
-    lightsOn = true
-    away = false
-    timeOn = 0
+        Point myPoint = new Point(2,3);
+        
+        System.out.println("Value of point before doubling: " + myPoint);
+        Utility.pointDoubler(myPoint);
+        System.out.println("Value of point after doubling: " + myPoint);
     ```
-
       
 ## ArrayList Experimentation
 1. Open *FloatingPointComparison.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
