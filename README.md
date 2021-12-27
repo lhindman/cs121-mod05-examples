@@ -75,29 +75,33 @@ Steps to Clone Examples
     ```
 
 ## File Parsing Experimentation
-1. Open *MinOfThree.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Run the program with each of the following sets of input values and record the results of each. 
-        - 1 2 3
-        - 3 2 1
-        - 1 1 3
-        - 3 1 1
-        - 3 3 3
-            
-    - Modify the code for technique 2, replacing each instance of '<=' with '<' as shown below.  Then run again with each of the sets of values. What is the result and why?  
+1. Open *FileEcho.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
+    - Reading a file line-by-line is a common way to process text data.  To help reinforce this idea, use the following code to modify the existing display loop so that it prepends line numbers to each line of text before displaying it in the console. Experiment by using it to read a number of files, including FileEcho.java. Compare the line numbers in VSCode against those reported by FileEcho.  Record your observations.
     ```
-    if ((num1 < num2) && (num1 < num3)) {
-        min = num1;
-    }
-    if ((num2 < num3) && (num2 < num1)) {
-        min = num2;
-    }
-    if ((num3 < num2) && (num3 < num1)) {
-        min = num3;
+    int lineNumber = 1;
+    while (fileScan.hasNextLine()) {
+        String line = fileScan.nextLine();
+
+        System.out.printf("%5d | %s\n",lineNumber,line);
+
+        lineNumber++;
     }
     ```
-            
-1. Open *Guessing.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Play three games and record what the correct answer was for each game
+           
+1. Open *CSVParser.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
+    - Students often struggle with the CSVParser example because it uses two different types of Scanner objects, one to scan the File line-by-line and other other to process each individual line to extract the data fields. To help reienforce this idea of processing the CSV file line, use the following code to modify the existing loop to output line numbers preceeding the unprocessed CSV data before displaying it in the console.
+    ```
+    /* 3. Create a loop to read each line from the Scanner */
+        int lineNumber = 1;
+        while(bobsScanner.hasNextLine()) {
+            String line = bobsScanner.nextLine();
+
+            /* 4. Print each line */
+            System.out.printf("Processing Line %3d: %s\n",lineNumber,line);
+            lineNumber++;
+
+            ...
+    ```
     - Modify the Random object so that it is instantiated using a seed number as shown below. Then Play the game three more times, recording the answer each time. What is the result and why?  
     ```
     Random generator = new Random(123);
