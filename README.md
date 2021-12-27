@@ -26,13 +26,13 @@ Steps to Clone Examples
  
     - Add the following code to the end of the main method in StaticFun.java. What effect do the calls to numDoubler1() and numDoubler2() have on the value of myNum?, why?  
     ```
-        int myNum = 2;
-        
-        Utility.numDoubler1(myNum);
-        System.out.println("Value of myNum after calling numDoubler1: " + myNum);
+    int myNum = 2;
 
-        myNum = Utility.numDoubler2(myNum);
-        System.out.println("Value of myNum after calling numDoubler2: " + myNum);
+    Utility.numDoubler1(myNum);
+    System.out.println("Value of myNum after calling numDoubler1: " + myNum);
+
+    myNum = Utility.numDoubler2(myNum);
+    System.out.println("Value of myNum after calling numDoubler2: " + myNum);
     ```
     
 1. Open *StaticFun.java* and *Utility.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
@@ -46,33 +46,32 @@ Steps to Clone Examples
  
     - Add the following code to the end of the main method in StaticFun.java. Were the values of x and y inside the Point object modified by the pointDoubler() method even though it doesn't have a return value? What is the difference between passing in an object as a argument to a method vs passing in a primitive data type such as an int?  
     ```
-        Point myPoint = new Point(2,3);
-        
-        System.out.println("Value of point before doubling: " + myPoint);
-        Utility.pointDoubler(myPoint);
-        System.out.println("Value of point after doubling: " + myPoint);
+    Point myPoint = new Point(2,3);
+
+    System.out.println("Value of point before doubling: " + myPoint);
+    Utility.pointDoubler(myPoint);
+    System.out.println("Value of point after doubling: " + myPoint);
     ```
       
 ## ArrayList Experimentation
-1. Open *FloatingPointComparison.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Experiment by decreasing TOLERANCE values, identifying which provide a match that is "close enough"
+1. Open *MyRainbow.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
+    - Add three additional color objects to the rainbow immediately after ORANGE, YELLOW and PINK are added. Run the program and record how how affect the result of the list size as well as where in the list your colors were added.  To make this easier to record, you may temporarily *comment out* the code in the *working with loops* section.
     ```
-    final double TOLERANCE = 0.00000000000001;
-    final double TOLERANCE = 0.000000000000001;
-    final double TOLERANCE = 0.0000000000000001;
-    final double TOLERANCE = 0.00000000000000001;
-    final double TOLERANCE = 0.000000000000000001;
+    rainbow.add(Color.GREEN);
+    rainbow.add(Color.BLUE);
+    rainbow.add(Color.BLACK);
     ```
-
-1. Open *ObjectComparison.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Modify the comparison between p1 and p3 (line 31) to be a comparison between p1 and p2 as shown below. What is the result and why?  
+    - Notice in the constructor for the Arraylist, we *tagged* our rainbow ArrayList with the **Color** class. Let's see what happens when we an object that is not of type Color. Use the code below to add a String to our rainbow and make of note of the line number where you add the String. To make this easier to record, you may temporarily *comment out* the code in the *working with loops* section. Attempt to run the program and student the java output (stack trace) carefully.  Notice that it not only tells you exactly what is wrong, but also the line where the issue is detected.  Record your observations.
     ```
-    if (p1 == p2)
+    rainbow.add("Purple");
     ```
 
-    - Modify the comparison between p1 and p2 (line 15) to be a comparison between p1 and p3 as shown below. What is the result and why? 
+    - Revert the code changes made in the previous steps.  Click the *Source Control* icon then select *MyRainbow.java* from the list of changes. Hover over the icons beside the filenames to find the icon labelled **Discard Changes**, then click it. This will revert all the code changes to MyRainbow.java back to the last commit.  Please be careful if you choose to use this functionality when working in your lab activities.
+
+
+    - Modify the *rainbow.remove(0)* line as follows to intentionally remove a item that does not exist in the ArrayList, and make a note of the line number. Study the Java output (stacktrace) carefully noting the type of exception, the index value that cause the exception and the line number in MyRainbow where the exception was detected. Record your observations.
     ```
-    if (p1.equals(p3))  
+    rainbow.remove(199);
     ```
 
 ## File Parsing Experimentation
