@@ -122,3 +122,24 @@ Steps to Clone Examples
     String artist = bobsLineScanner.next();
     int duration = bobsLineScanner.nextInt();
     ```
+    - Often times there are more fields than we need in the CSV data and we only want to work with a single field.  To do this, we can use a while loop to step through each field in the line and filter value to allow us to work with specific fields. Modify the while loops as shown in the code below to enable filtering the output to a specified field. Experiment with setting the field filter to values of 1 through 5 record the values that are output for each (artist, album, title, duration).
+    ```
+	/* 3. Create a loop to read each line from the Scanner */
+	int fieldFilter = 3;
+	while(bobsScanner.hasNextLine()) {
+		String line = bobsScanner.nextLine();
+
+		Scanner lineScanner = new Scanner (line);
+		lineScanner.useDelimiter(",");
+
+		int fieldCounter = 1;
+		while (lineScanner.hasNext()) {
+			String field = lineScanner.next();
+			if(fieldCounter == fieldFilter) {
+				System.out.println("CSV Field " + fieldCounter + ": " + field);
+			}
+			fieldCounter++;
+		}
+		lineScanner.close();
+	}
+   ```
