@@ -58,13 +58,13 @@ Steps to Clone Examples
       
 ## ArrayList Experimentation
 1. Open *MyRainbow.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
-    - Add three additional color objects to the rainbow immediately after ORANGE, YELLOW and PINK are added. Run the program and record how how affect the result of the list size as well as where in the list your colors were added.  To make this easier to record, you may temporarily *comment out* the code in the *working with loops* section.
+    - Add three additional color objects to the rainbow immediately after ORANGE, YELLOW and PINK are added. Run the program and record how how affect the result of the list size as well as where in the list your colors were added.
     ```
     rainbow.add(Color.GREEN);
     rainbow.add(Color.BLUE);
     rainbow.add(Color.BLACK);
     ```
-    - Notice in the constructor for the Arraylist, we *tagged* our rainbow ArrayList with the **Color** class. Let's see what happens when we an object that is not of type Color. Use the code below to add a String to our rainbow and make of note of the line number where you add the String. To make this easier to record, you may temporarily *comment out* the code in the *working with loops* section. Attempt to run the program and student the java output (stack trace) carefully.  Notice that it not only tells you exactly what is wrong, but also the line where the issue is detected.  Record your observations.
+    - Notice in the constructor for the Arraylist, we *tagged* our rainbow ArrayList with the **Color** class. Let's see what happens when we an object that is not of type Color. Use the code below to add a String to our rainbow and make of note of the line number where you add the String. Attempt to run the program and student the java output (stack trace) carefully.  Notice that it not only tells you exactly what is wrong, but also the line where the issue is detected.  Record your observations.
     ```
     rainbow.add("Purple");
     ```
@@ -76,6 +76,8 @@ Steps to Clone Examples
     ```
     rainbow.remove(199);
     ```
+
+## ArrayList with Loops Experimentation
 
 ## File Parsing Experimentation
 1. Open *FileEcho.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
