@@ -105,6 +105,7 @@ Steps to Clone Examples
         return output;
     }
 ```
+- Notice that this version of the output prints a trailing comma after the last item.  Speculate on how you can modify the **datasetToString()** method so that it does not include the trailing comma after the last item. Go ahead and experiement with the code to test out your ideas. Record your thoughts and results in the coding journal.
 
 ## File Parsing Experimentation
 1. Open *FileEcho.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
