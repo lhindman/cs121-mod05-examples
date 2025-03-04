@@ -79,6 +79,33 @@ Steps to Clone Examples
 
 ## ArrayList with Loops Experimentation
 
+1. Open *MagicEightBall.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
+    - Add the following **displayDataset()** static method to the end of the MagicEightBall class, after the **main()** method. From the **main()** method, call the **displayDataset()** method, passing in the *responses* ArrayList as a parameter.  Run the program. It is working correctly, you should see the contents of the *responses* ArrayList displayed one entry per line.  Write a properly formatted JavaDoc function header comment for this method, describing its behavior, the parameters and return value and record it in your coding journal.
+
+```
+    public static void displayDataset(ArrayList<String> dataset)
+    {
+        for (String item: dataset)
+        {
+            System.out.println(item);
+        }
+    }
+```
+- Comment out the call to **displayDataset()** in the **main()** method, but do not comment out the static method itself.  The run the program to confirm that it no longer displays the full response dataset. This is in preparation fo rthe next step.
+- Add the following **datasetToString()** static method to the end of the MagicEightBall class, after the **displayDataset()** method. From the **main()** method, call the **datasetToString()** method and store the return value to a string variable, passing in the *responses* ArrayList as a parameter. Add a line to to **main()** to print the String variable returned by **datasetToString()**  Run the program. It is working correctly, you should see the contents of the *responses* ArrayList displayed as comma separated values.  Write a properly formatted JavaDoc function header comment for this method, describing its behavior, the parameters and return value and record it in your coding journal.
+
+```
+    public static String datasetToString(ArrayList<String> dataset)
+    {
+        String output = "";
+        for (String item: dataset)
+        {
+            output += item + ", ";
+        }
+        return output;
+    }
+```
+
 ## File Parsing Experimentation
 1. Open *FileEcho.java*, read the code and run it to ensure it functions properly.  Then work through each of the experiments below and record your observations.
     - Reading a file line-by-line is a common way to process text data.  To help reinforce this idea, use the following code to modify the existing display loop so that it prepends line numbers to each line of text before displaying it in the console. Experiment by using it to read a number of files, including FileEcho.java. Compare the line numbers in VSCode against those reported by FileEcho.  Record your observations.
