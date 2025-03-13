@@ -60,4 +60,32 @@ public class MagicEightBall {
 
         
     }
+
+
+    /**
+     * Print the contents of the provided dataset in the console with one record per line
+     * @param dataset ArrayList of String objects that make up the dataset to be displayed
+     */
+    public static void displayDataset(ArrayList<String> dataset)
+    {
+        for (String item: dataset)
+        {
+            System.out.println(item);
+        }
+    }
+
+    /**
+     * Generate a String containing the contents of the dataset as comma separated values
+     * @param dataset ArrayList of String objects that make up the dataset
+     * @return String containing the contents of the dataset as comma separated values
+     */
+    public static String DatasetToString(ArrayList<String> dataset)
+    {
+        String output = "";
+        for (String item: dataset)
+        {
+            output += item + ", ";
+        }
+        return output;
+    }
 }
